@@ -1,8 +1,8 @@
 package cn.byack.simplefactory.operation;
 
-public class OperationMul extends BaseOperation {
+public class OperationMul implements Operation {
     @Override
-    public double getResult() {
-        return getNumberA() * getNumberB();
+    public double getResult(double numberA, double numberB) {
+        return numberA * numberB;
     }
 }

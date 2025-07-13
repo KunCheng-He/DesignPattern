@@ -1,6 +1,6 @@
 package cn.byack.simplefactory;
 
-import cn.byack.simplefactory.operation.BaseOperation;
+import cn.byack.simplefactory.operation.Operation;
 import java.util.Scanner;
 
 public class OperationTest {
@@ -21,10 +21,8 @@ public class OperationTest {
         } while (true);
 
         // 简单工厂模式
-        BaseOperation oper = OperationFactory.createOperation(operation);
+        Operation oper = OperationFactory.createOperation(operation);
         assert oper != null;
-        oper.setNumberA(numberA);
-        oper.setNumberB(numberB);
-        System.out.println(oper.getResult());
+        System.out.println(oper.getResult(numberA, numberB));
     }
 }
