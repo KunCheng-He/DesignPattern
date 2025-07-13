@@ -22,6 +22,7 @@ public class OperationTest {
 
         // 简单工厂模式
         BaseOperation oper = OperationFactory.createOperation(operation);
+        assert oper != null;
         oper.setNumberA(numberA);
         oper.setNumberB(numberB);
         System.out.println(oper.getResult());
